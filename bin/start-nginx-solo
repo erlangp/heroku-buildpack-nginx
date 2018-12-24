@@ -33,7 +33,6 @@ echo 'buildpack=nginx at=logs-initialized'
   #We expect nginx to run in foreground.
   #We also expect a socket to be at /tmp/nginx.socket.
   echo 'buildpack=nginx at=nginx-start'
-  bin/nginx -V
   bin/nginx -p . -c config/nginx.conf
   echo 'nginx' >$psmgr
 ) &
